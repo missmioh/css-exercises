@@ -1,0 +1,26 @@
+.odds {
+    background-color: #e5a3a3;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.odds.cooler {
+    font-size: 24px;
+}
+
+#second {
+    color: #0000FF;
+    font-size: 36px;
+}
+
+#fourth {
+    background-color: #8fe08f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*
+    Dublicate code could have been avoided here by making a single class
+    selector for .cooler and only specifiying font-size there, instead of in #forth.
+    For this to work, the HTML file would have needed to be changed as specified in
+    the comments there.
+*/
