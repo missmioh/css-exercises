@@ -8,20 +8,24 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+  /* Here, I went for changing rule order. Chaining selectors would have worked as well.
+  font-weight would not need to be specified here, as it's already defined in the group
+  above */
+}
+
+.button.confirm {
   background: green;
   color: white;
   font-weight: bold;
 } 
+ /* could also just be moved below .button, but here, I went for chaining selectors. */
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,11 +33,17 @@ body {
   font-size: 20px;
 }
 
-.child {
+
+
+.text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
 }
+
+/* specificity was added. Below, there were two selectors, class and type. Above, only one 
+class selector (.child) was present. Hence, adding .text combines two class selectors and is thus
+more specific than a combination of one type and one class selector. */
 
 div.text {
   color: rgb(0, 0, 0);
