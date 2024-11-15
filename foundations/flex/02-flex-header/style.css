@@ -1,6 +1,11 @@
 .header  {
-  font-family: monospace;
+  font-family: "Courier New", monospace;
   background: papayawhip;
+  display: flex;
+  align-items: center;
+  /* padding could have been moved to header as well */
+  /* justify-content: space-between;
+  could have also achieved what margin: auto; is doing in .logo */
 }
 
 .logo {
@@ -9,11 +14,21 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+  margin: auto;
+  flex: initial;
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  padding-inline-start: 0px;
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+ /* flex: 1;
+ wasn't necessary for this exercise
+ using a padding-inline-start was, as I added regular padding here instead of in .header */
+  
 }
 
 a {
