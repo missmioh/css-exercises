@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .modal {
@@ -20,6 +21,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  padding: 15px;
+  gap: 15px;
 }
 
 .icon {
@@ -33,6 +37,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  /* didn't see more modification of the text was needed: */
+  font-size: 18px;
+/* in the solution but doesn't change the output at all */
+  align-items: center;
+}
+
+.text {
+  margin: 8px 0px 16px 0px;
+  /* solution suggested using margin-bottom for .text and .header instead */
 }
 
 .close-button {
@@ -49,6 +69,7 @@ body {
   border: 1px solid #eee;
   padding: 0;
 }
+
 
 button {
   cursor: pointer;
