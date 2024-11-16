@@ -12,7 +12,22 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: space-between;
+/* align-items: center;
+   worked as well, so inherited as well */
+  padding: 8px;
 }
+
+.keep-right,
+.keep-left {
+  display: flex;
+/*  flex: 0;  */
+  align-items: center;
+  gap: 16px;
+}
+
+
 
 .profile-image {
   background: rebeccapurple;
@@ -20,6 +35,7 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+/*  flex-shrink: 0;  */
 }
 
 .logo {
@@ -27,6 +43,7 @@ body {
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+/*  flex: 1;  */
 }
 
 button {
@@ -35,6 +52,9 @@ button {
   background: rebeccapurple;
   color: white;
   padding: 8px 24px;
+/*  min-width: max-content; 
+  flex: 1;
+  not having this be a flex item already seems to have done the trick of keeping it on one line */
 }
 
 a {
@@ -45,4 +65,10 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex;
+  gap: 16px;
+/*  flex: none;  not necessary anymore after changing ln 17*/
+  padding: 0;
+  margin: 0;
+/* forgot margin declaration initially as it was barely having an effect */
 }
